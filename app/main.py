@@ -1,4 +1,11 @@
-from system import get_hostname, get_os, get_kernel
+from system import ( 
+    get_hostname,
+    get_os,
+    get_kernel,
+    get_cpu_usage,
+    get_memory_usage,
+    get_disk_usage,
+)
 
 def main():
     hostname = get_hostname()
@@ -10,5 +17,14 @@ def main():
     kernel = get_kernel()
     print(f"Kernel: {kernel}")
 
-if __name__== "__main__":
+    cpu_usage = get_cpu_usage()
+    print(f"CPU: {cpu_usage}%")
+
+    memory_usage = get_memory_usage()
+    print(f"Memory: {memory_usage}%")
+
+    disk_usage = get_disk_usage()
+    print(f"Disk: {disk_usage}%")
+
+if __name__ == "__main__":
     main()
