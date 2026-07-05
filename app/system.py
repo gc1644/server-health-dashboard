@@ -1,19 +1,6 @@
 import platform
 import psutil
 
-def get_system_info():
-    return { 
-        "system": {
-            "hostname": get_hostname(),
-            "os": get_os(),
-            "kernel": get_kernel(),
-        },
-        "usage": {
-            "cpu": get_cpu_usage(),
-            "memory": get_memory_usage(),
-            "disk": get_disk_usage(),
-        },
-    }
 
 def get_hostname():
     return platform.node()
@@ -32,3 +19,17 @@ def get_memory_usage():
 
 def get_disk_usage():
     return psutil.disk_usage("/").percent
+
+def get_system_info():
+    return { 
+        "system": {
+            "hostname": get_hostname(),
+            "os": get_os(),
+            "kernel": get_kernel(),
+        },
+        "usage": {
+            "cpu": get_cpu_usage(),
+            "memory": get_memory_usage(),
+            "disk": get_disk_usage(),
+        },
+    }
