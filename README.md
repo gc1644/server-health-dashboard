@@ -10,3 +10,5 @@ A Python project that collects system information and exports it as JSON
 - CPU usage
 - Memory usage
 - Disk usage
+- JSON export
+- Flask API
