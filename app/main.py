@@ -1,4 +1,6 @@
-from system import ( 
+import json
+
+from system import (
     get_hostname,
     get_os,
     get_kernel,
@@ -7,24 +9,27 @@ from system import (
     get_disk_usage,
 )
 
+
 def main():
-    hostname = get_hostname()
-    print(f"Hostname: {hostname}")
 
-    os_name = get_os()
-    print(f"OS: {os_name}")
+    system_info = {
+        "system": {
+            "hostname": get_hostname(),
+            "os": get_os(),
+            "kernel": get_kernel(),
+        },
+        "usage": {
+            "cpu": get_cpu_usage(),
+            "memory": get_memory_usage(),
+            "disk": get_disk_usage(),
+        },
+    }
 
-    kernel = get_kernel()
-    print(f"Kernel: {kernel}")
+    with open("data/system.json", "w") as file:
+        json.dump(system_info, file, indent=4)
+        file.write("\n")
 
-    cpu_usage = get_cpu_usage()
-    print(f"CPU: {cpu_usage}%")
-
-    memory_usage = get_memory_usage()
-    print(f"Memory: {memory_usage}%")
-
-    disk_usage = get_disk_usage()
-    print(f"Disk: {disk_usage}%")
+    print(system_info)
 
 if __name__ == "__main__":
     main()

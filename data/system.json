@@ -1,0 +1,12 @@
+{
+    "system": {
+        "hostname": "pop-os",
+        "os": "Linux",
+        "kernel": "7.0.11-76070011-generic"
+    },
+    "usage": {
+        "cpu": 3.7,
+        "memory": 48.2,
+        "disk": 56.6
+    }
+}

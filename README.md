@@ -1,10 +1,12 @@
 # Server Health Dashboard
 
-Learning DevOps by building a monitoring dashboard with Python and Docker
+A Python project that collects system information and exports it as JSON
 
-## Goals
+## Features
 
-- Collect system metrics
-- Expose metrics through an API
-- Dockerize the application
-- Build a simple dashboard
+- Hostname
+- OS
+- Kernel Version
+- CPU usage
+- Memory usage
+- Disk usage
