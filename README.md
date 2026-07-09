@@ -12,3 +12,4 @@ A Python project that collects system information and exports it as JSON
 - Disk usage
 - JSON export
 - Flask API
+- Dockerized for easy deployment
