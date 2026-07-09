@@ -8,6 +8,9 @@ app = Flask(__name__)
 def home():
     return get_system_info()
 
+@app.route("/health")
+def health():
+    return {"status": "ok"}
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
